@@ -22,8 +22,6 @@ class Adaline:
 
     def training_adaline(self, epsilon, save_error=False):
         ''' Treinamento do perceptron pela regra Adaline '''
-        if save_error:
-            data_file = open('erro-seasson ' + datetime.now().strftime("%H.%M.%S.%f") + '.txt', 'w')
         content = ''
 
         while True:
@@ -47,6 +45,7 @@ class Adaline:
                 break
 
         if save_error:
+            data_file = open('erro-seasson ' + datetime.now().strftime("%H.%M.%S.%f") + '.txt', 'w')
             data_file.write(content)
             data_file.close()
 
