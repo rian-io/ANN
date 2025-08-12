@@ -33,11 +33,10 @@ def obter_dados(nome_arquivo, tipo_acesso=1):
         return input_matrix
 
 def clean_results():
-    '''
-        path_0 = './perceptron_mlp_result.txt'
-        if os.path.isfile(path_0):
-            os.remove(path_0)
-    '''
+    path_0 = './perceptron_mlp_result.txt'
+    if os.path.isfile(path_0):
+        os.remove(path_0)
+
     path_1 = './perceptron_hebb_result.txt'
     if os.path.isfile(path_1):
         os.remove(path_1)
